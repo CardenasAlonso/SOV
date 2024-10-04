@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+body{
+    background: url(../imagenes2/fondoformulario.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   backdrop-filter: contrast(120%);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.409);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    padding: 50px;
+}
+
+.form h2{
+    text-align: center;
+    margin: 10px;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+
+input::placeholder {
+    color: white; 
+}
+input {
+    border: none;
+    border-bottom: 2px solid #fffcfc;
+    background: transparent;
+    color: white;
+    outline: none;
+    padding: 5px;
+}
+
+.control{
+    font-size: 19px;
+    padding-top: 50px;
+}
+
+
+
+.recor{
+    display: flex;
+    padding-top: 6vw;
+    gap: 15vw;
+    color: white;
+    font-size: 15px;
+}
+a {     text-align: center;
+        font-size: 15px;
+        color: white;
+        text-decoration: none;
+}
+button{
+    margin: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 13px;
+    padding: 10px;
+    background: black;
+    color: white;
+}
+
