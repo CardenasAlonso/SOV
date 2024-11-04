@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-size: 20px;
+   }
+   body {
+     display: block;
+     margin: 0px;
+   }
+  
+   
+   #banner1{
+    position: relative;
+    background-image: url(../imagen/p.png);
+    background-size: cover;
+    background-position: center;
+    height: 51.4vw; 
+  }
+  
+   header{
+     height: 100px;
+     padding: 0 50px;
+     color: aliceblue;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     box-shadow: 0 0 10px black;
+     background: rgba(0, 0, 0, 0.157);
+   }
+  
+   .menu a{
+     color: rgb(255, 255, 255);
+     text-transform: uppercase;
+     text-decoration: none;
+     padding: 0 10px;
+     transition: 0.4s;
+     font-size: 20px;
+   }
+   
+   .borde-l{
+    border-bottom: solid #BB4F06 5px;
+   }
+   .mostrar-menu,
+   .esconder-menu{
+     font-size: 40px;
+     cursor: pointer;
+     transition: 0.4s;
+     display: none;
+   }
+   
+   .mostrar-menu{
+     order: 1;
+   }
+   
+   .menu a:hover,
+   .mostrar-menu:hover,
+   .esconder-menu:hover{
+     color: #BB4F06;
+     text-shadow: 0 0 10px;
+   }
+   
+   #check{
+     display: none;
+   }
+  
+   /*FIN MENU REPONSIVE*/
+  
+   
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+.product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.product p {
+    color: #555;
+}
+.product .price {
+    font-size: 20px;
+    color: #e67e22;
+}
+.product button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product button:hover {
+    background-color: #2980b9;
+}
+
+/*carrusel*/
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+  border-radius: 10px; /* Bordes redondeados */
+}
+h5 {
+  font-size: 1.5rem; /* Tamaño del título */
+}
+p {
+  font-size: 1rem; /* Tamaño del texto */
+}
+.carousel-item img {
+  height: 80px; /* Altura de las imágenes */
+  width: 80px;
+  object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
