@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inicio </title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <section id="menu">
+
+        <!--menu transparente -->
+        <header>
+            <p>VALLE GRANDE <br> INSTITUTO DE EDUCACION SUPERIOR</p>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
+            </label>
+            <nav class="menu">
+                <a class="borde-l" href="index.html">INICIO</a>
+                <a href="proyecto.html">PROYECTOS ANTIGUOS</a>
+                <a href="proyecto2.html">PROYECTOS Actuales</a>
+
+
+                <label for="check" class="esconder-menu">
+                    &#215
+                </label>
+            </nav>
+        </header>
+
+
+        <!-- texto grande -->
+        <div class="textmenu">
+            <h2>ALGUNAS COSAS <br><span>SOBRE MÍ</span></h2>
+        </div>
+    </section>
+
+    <section class="personal">
+        <!-- cosas personales -->
+        <div class="textpersonal">
+            <p>Soy Alonso Cardenas, alumno del Instituto Valle Grande, <br>
+                actualmente cursando el 2° Ciclo y puede que repruebe :c <br> <br>
+                <span>Seguidamente te mostrare algunos de los proyectos que logre realizar con diferentes <br>
+                    compañeros en el transcurso de la carrera, el cual personalmente me gusto.</span>
+            </p>
+        </div>
+
+        <div class="proyectos">
+            <div class="imagenes">
+                <div class="carrusel" id="carrusel">
+                    <img href="proyecto.html" src="../img/imagen-1.png" alt="">
+                    <img href="proyecto2.html" src="../img/imagen-2.png" alt="">
+                </div>
+            </div>
+
+            <div class="botones">
+                <button onclick="moverCarrusel(-1)">Atras</button>
+                <button onclick="moverCarrusel(1)">Adelante</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
