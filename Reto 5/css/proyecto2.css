@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    user-select: none;
+    font-size: 20px;
+}
+
+body {
+    display: block;
+    margin: 0px;
+}
+
+
+#menu {
+    position: relative;
+    background-image: url(../img/principal.png);
+    background-size: cover;
+    background-position: center;
+    height: 51.4vw;
+}
+
+header {
+    height: 100px;
+    padding: 0 50px;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px black;
+    background: rgba(0, 0, 0, 0.157);
+}
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+    font-size: 20px;
+}
+
+.borde-l {
+    border-bottom: solid #0c45e0 5px;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #0c45e0;
+    text-shadow: 0 0 10px;
+}
+
+#check {
+    display: none;
+}
+
+.textmenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vw;
+}
+
+.textmenu h2 {
+    position: relative;
+    bottom: 8vw;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 550;
+    font-size: 3.8vw;
+}
+
+.textmenu h2 span {
+    color: #BB4F06;
+    font-weight: 550;
+    font-size: 3.8vw;
+}
+
+.pagina {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.ods {
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+}
+
+.parrafo {
+    display: flex;
+    text-align: center;
+    font-size: 27px;
+    justify-content: center;
+}
