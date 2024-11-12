@@ -289,7 +289,7 @@ UPDATE PRENDA
 /* 17 eliminar fisicamente las prendas */ 
  
 DELETE FROM PRENDA
-WHERE id = 'Camisa manga corta';
+WHERE descripcion = 'Camisa manga corta';
  
 DELETE FROM PRENDA
 	WHERE descripcion = 'Polo sport';
