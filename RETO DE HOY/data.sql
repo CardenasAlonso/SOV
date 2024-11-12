@@ -84,6 +84,11 @@ AND i.TABLE_SCHEMA = DATABASE();
    
    
 use dbGamarraMarket; 
+
+
+
+
+/* 4 insetar los siguientes registros*/
    
 INSERT INTO CLIENTE 
 	(tipo_documento, numero_documento, nombres, apellidos, email, celular, fecha_nacimiento) 
@@ -111,7 +116,12 @@ VALUES
 
 select * from CLIENTE;
    
-   
+  
+  
+  
+  
+/* 5 insetar los siguientes registros*/  
+  
 INSERT INTO VENDEDOR
 	(tipo_documento, numero_documento, nombres, apellidos, salario, celular, email)
 VALUES
@@ -123,6 +133,12 @@ VALUES
 
 select * from VENDEDOR;
 
+
+
+
+
+
+/* 6 insetar los siguientes registros*/
 
 INSERT INTO PRENDA
 	(descripcion, marca, cantidad, talla, precio)
@@ -142,6 +158,11 @@ VALUES
 select * from PRENDA;  
 
 
+
+
+
+/* 7 insetar los siguientes registros*/
+
 INSERT INTO VENTA
 	(fecha_hora, cliente_id, vendedor_id)
 VALUES
@@ -152,6 +173,10 @@ VALUES
     
 SELECT * FROM VENTA;
 
+
+
+
+/* 8 insetar los siguientes registros*/
 
 INSERT INTO VENTA_DETALLE
 	(venta_id, prenda_id, cantidad)
@@ -176,7 +201,7 @@ select * from VENTA_DETALLE;
 UPDATE CLIENTE
 	SET celular = '922881101',
 		email = 'mario.rodriguez@outlook.com'
-	WHERE id = 10;
+	WHERE nombres = 'Mario' AND apellidos = 'Rodríguez Mayo';
 
    
    
@@ -184,22 +209,22 @@ UPDATE CLIENTE
    
 UPDATE CLIENTE
 	SET celular = '977226604'
-    WHERE id = 13;
+    WHERE numero_documento = '53298147';
    
    
 /* 11  eliminar logicamente unos DNI */   
    
 UPDATE CLIENTE
 	SET activo = '0'
-    WHERE id = 12;
+    WHERE  numero_documento = '11453265';
 
 UPDATE CLIENTE
 	SET activo = '0'
-    WHERE id = 14;
+    WHERE  numero_documento = '74142585';
     
 UPDATE CLIENTE
 	SET activo = '0'
-    WHERE id = 18;
+    WHERE  numero_documento = '49985471';
     
 
    
@@ -207,15 +232,15 @@ UPDATE CLIENTE
    
 UPDATE CLIENTE
 	SET celular = ''
-    WHERE id = 9;   
+    WHERE  numero_documento = '87952514'; 
    
 UPDATE CLIENTE
 	SET celular = ''
-    WHERE id = 13;
+    WHERE  numero_documento = '55869321';
    
 UPDATE CLIENTE
 	SET celular = ''
-    WHERE id = 17;   
+    WHERE  numero_documento = '74142585'; 
    
    
 
@@ -224,7 +249,7 @@ UPDATE CLIENTE
 UPDATE CLIENTE
 	SET email = 'oscar.quiroz@yahoo.es',
 		activo = 1
-    WHERE id = 18;    
+    WHERE nombres = 'Oscar C.' AND apellidos = 'Quiroz Zavala';    
    
    
   
@@ -234,9 +259,64 @@ UPDATE CLIENTE
 INSERT INTO CLIENTE 
 	(tipo_documento, numero_documento, nombres, apellidos, email, celular, fecha_nacimiento) 
 VALUES
-	('DNI', '88225463', 'Gustavo Tadeo', 'Quispe Solorzano', 'gustavo.quipe@gmail.com', '', str_to_date('2001-', '')),
-	('DNI', '15753595', ''),
-    ('DNI', '76314895', ''),
-    ('DNI', '84725001', ''),
-    ('DNI', '11228514', ''),
-    ('DNI', '51436952', '');
+	('DNI', '88225463', 'Gustavo Tadeo', 'Quispe Solorzano', 'gustavo.quipe@gmail.com', '', str_to_date('2001-10-13', '%Y-%m-%d')),
+	('DNI', '15753595', 'Daniela', 'Solis Vargas', 'daniela.solis@outlook.com', '', str_to_date('1993-11-09', '%Y-%m-%d')),
+    ('DNI', '76314895', 'Miltón Gregorio' , 'Vásquez Iturrizaga', 'milton.gregorio@yahoo.es', '974815133', str_to_date('2004-06-22', '%Y-%m-%d')),
+    ('DNI', '84725001', 'Verónica', 'Ancajima Araujo', 'veronica.ancajima@yahoo.com', '', str_to_date('1980-11-07', '%Y-%m-%d')),
+    ('DNI', '11228514', 'Felicita', 'Marroquin Candela', 'felicita.marroquin@outlook.com', '966001472', str_to_date('2006-06-06', '%Y-%m-%d')),
+    ('DNI', '51436952', 'Luhana', 'Ortíz Rodríguez', 'luhana.ortiz@outlook.com', '960405017', str_to_date('1980-11-25', '%Y-%m-%d'));
+  
+  
+
+/* 15 actualizar el precio del polo */
+
+UPDATE PRENDA
+	SET precio = '45.00'
+    WHERE  descripcion = 'Polo sport' AND marca = 'Australia'; 
+    
+
+
+
+/* 16 cambiar el nombre de la prenda */   
+
+UPDATE PRENDA
+	SET  marca = 'Michi elegante'
+    WHERE  descripcion = 'Corbata'; 
+
+ 
+
+   
+/* 17 eliminar fisicamente las prendas */ 
+ 
+DELETE FROM PRENDA
+WHERE id = 'Camisa manga corta';
+ 
+DELETE FROM PRENDA
+	WHERE descripcion = 'Polo sport';
+    
+    
+    
+/* 18 eliminar fisicamente a la vendedora*/
+    
+DELETE FROM VENDEDOR
+	WHERE nombres = 'Marcela' AND apellidos = 'Napacio Cama';
+
+
+
+
+/* 19 eliminar fisicamente los clientes cuyos documentos son*/
+
+DELETE FROM VENDEDOR
+	WHERE numero_documento = '47142536';
+    
+DELETE FROM VENDEDOR
+	WHERE numero_documento = '77889955';    
+
+
+
+/* 20 eliminar todos los clientes nacidos en 1980 */ 
+
+DELETE FROM CLIENTE
+	WHERE fecha_nacimiento = '1980';  
+   
+   
